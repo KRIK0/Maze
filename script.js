@@ -451,24 +451,12 @@ function drawMaze() {
 	];
 	const canvas = document.getElementById("canvas");
 	const ctx = canvas.getContext("2d");
-	console.log("maze " + cord.length);
 	ctx.beginPath();
 	for (i = 0; i < cord.length; i++) {
-		console.log("maze2");
 		ctx.moveTo(cord[i][0], cord[i][1]);
 		ctx.lineTo(cord[i][2], cord[i][3]);
 	}
 	ctx.lineWidth = 2;
-	ctx.stroke();
-	console.log("maze3 " + cord.length);
-}
-
-function line(ctx, i, path) {
-	ctx.beginPath();
-	ctx.moveTo(path[i][0], path[i][1]);
-	ctx.lineTo(path[i + 1][0], path[i + 1][1]);
-	ctx.lineWidth = 2;
-	ctx.strokeStyle = "red";
 	ctx.stroke();
 }
 
@@ -545,13 +533,12 @@ function drawPath() {
 	];
 	const canvas = document.getElementById("canvas");
 	const ctx = canvas.getContext("2d");
-	console.log("line " + path.length);
-	tim = 0;
 	for (i = 0; i < path.length - 1; i++) {
-		console.log("line2 " + tim);
-
-		setTimeout(line(ctx, i, path), tim);
-		tim += 50;
+		ctx.beginPath();
+		ctx.moveTo(path[i][0], path[i][1]);
+		ctx.lineTo(path[i + 1][0], path[i + 1][1]);
+		ctx.lineWidth = 2;
+		ctx.strokeStyle = "red";
+		ctx.stroke();
 	}
-	console.log("line3 " + path.length);
 }
