@@ -1,5 +1,14 @@
-#kotejebe {
-	background-image: url("/pictures/woods.png");
-	width: 484px;
-	height: 484px;
+body {
+	margin: 0 auto;
+}
+#woodsmap {
+	width: 1105px;
+	height: 1080px;
+}
+#maze {
+	background-image: url(../pictures/woods.png);
+}
+#mazecanvas {
+	padding-left: 18px;
+	padding-top: 8px;
 }
