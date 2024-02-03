@@ -452,7 +452,7 @@ function drawMaze() {
 	];
 	const canvas = document.getElementById("canvas");
 	const ctx = canvas.getContext("2d");
-	ctx.scale(2.2, 2.2);
+	ctx.scale(1.65, 1.65);
 	ctx.beginPath();
 	for (i = 0; i < cord.length; i++) {
 		ctx.moveTo(cord[i][0], cord[i][1]);
