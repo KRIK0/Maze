@@ -1,13 +1,20 @@
 body {
 	margin: 0 auto;
-	background: url(../pictures/background.png) no-repeat;
+}
+#main {
+	padding-left: 30%;
+	padding-bottom: 92px;
+	background: url(../pictures/background_1.png) no-repeat;
+}
+#EFTtitle {
+	margin-left: 5.7%;
 }
 #woodsmap {
-	width: 829px;
-	height: 803px;
+	width: 663px;
+	height: 648px;
 }
 #maze {
-	background-image: url(../pictures/woods_1.png);
+	background-image: url(../pictures/woods_2.png);
 }
 #mazecanvas {
 	padding-left: 12px;
