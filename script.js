@@ -462,7 +462,7 @@ function drawMaze() {
 	ctx.stroke();
 }
 
-function drawPath() {
+/*function drawPath() {
 	path = [
 		[138, 2],
 		[138, 58],
@@ -529,4 +529,131 @@ function drawPath() {
 		ctx.strokeStyle = "red";
 		ctx.stroke();
 	}
+}*/
+
+function drawSolution() {
+	path = [
+		[138, 2],
+		[138, 58],
+		[154, 58],
+		[154, 74],
+		[170, 74],
+		[170, 106],
+		[234, 106],
+		[234, 122],
+		[250, 122],
+		[250, 154],
+		[314, 154],
+		[314, 186],
+		[346, 186],
+		[346, 202],
+		[330, 202],
+		[330, 218],
+		[346, 218],
+		[346, 266],
+		[378, 266],
+		[378, 250],
+		[394, 250],
+		[394, 282],
+		[362, 282],
+		[362, 298],
+		[346, 298],
+		[346, 346],
+		[330, 346],
+		[330, 362],
+		[362, 362],
+		[362, 394],
+		[378, 394],
+		[378, 378],
+		[442, 378],
+		[442, 458],
+		[458, 458],
+		[458, 410],
+		[474, 410],
+		[474, 474],
+		[426, 474],
+		[426, 410],
+		[378, 410],
+		[378, 442],
+		[346, 442],
+		[346, 458],
+		[330, 458],
+		[330, 474],
+		[314, 474],
+		[314, 458],
+		[298, 458],
+		[298, 474],
+		[266, 474],
+		[266, 458],
+		[250, 458],
+		[250, 482],
+	];
+	const canvas = document.getElementById("canvas");
+	const ctx = canvas.getContext("2d");
+	const drawLinesWithDelay = (ctx, path, delay, style) => {
+		ctx.beginPath();
+		ctx.strokeStyle = "white";
+
+		ctx.lineWidth = 2;
+
+		const drawLineSegment = (i) => {
+			const point = path[i];
+			const x = point[0];
+			const y = point[1];
+
+			if (i === 0) {
+				ctx.moveTo(x, y);
+			} else {
+				ctx.lineTo(x, y);
+			}
+
+			ctx.stroke();
+
+			if (i < path.length - 1) {
+				setTimeout(() => {
+					drawLineSegment(i + 1);
+				}, delay);
+			} else {
+				ctx.closePath();
+			}
+		};
+
+		drawLineSegment(0);
+	};
+	const delayBetweenLines = 40;
+
+	drawLinesWithDelay(ctx, path, delayBetweenLines);
+}
+
+function moveImageAlongPath() {
+	const canvas = document.getElementById("canvas");
+	const ctx = canvas.getContext("2d");
+
+	const image = new Image();
+	image.src = "pictures/PMC_36.png"; // Replace with the path to your image
+
+	const startPosition = path[0];
+	const endPosition = path[path.length - 1];
+
+	const imgWidth = 9; // Adjust the width of your image
+	const imgHeight = 9; // Adjust the height of your image
+
+	let currentStep = 0;
+
+	function animate() {
+		if (currentStep < path.length - 1) {
+			const x = path[currentStep][0] - imgWidth / 2;
+			const y = path[currentStep][1] - imgHeight / 2;
+
+			ctx.drawImage(image, x, y, imgWidth, imgHeight);
+
+			currentStep = currentStep + 1;
+
+			setTimeout(() => {
+				requestAnimationFrame(animate);
+			}, 500);
+		}
+	}
+
+	animate();
 }
