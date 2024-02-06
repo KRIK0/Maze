@@ -654,6 +654,5 @@ function moveImageAlongPath() {
 			}, 500);
 		}
 	}
-
 	animate();
 }
