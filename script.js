@@ -654,5 +654,28 @@ function moveImageAlongPath() {
 			}, 500);
 		}
 	}
+
 	animate();
 }
+/*
+get_px=(ctx, x, y)=>{
+	return ctx.getImageData(x,y,1,1).data;
+};
+var w=//širina;
+var h=//višina;
+var arr=new Array(w*2+1);
+for(var i=0;i<arr.length;i++){
+	arr[i]=new Array(h*2+1);
+	arr[i].fill(0);
+}
+for(var i=0;i<w*2+1;i++){
+	for(var j=0;j<h*2;j++){
+		var wi=xStart+xSize/2*i;
+		var wj=xStart+xSize/2*j;
+		var cl=get_px(gtx,wi,hj);
+		if(cl[1]!=0){
+			arr[i][j]=1;
+		}
+	}
+}
+*/
