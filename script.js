@@ -592,7 +592,7 @@ function drawSolution() {
 	const ctx = canvas.getContext("2d");
 	const drawLinesWithDelay = (ctx, path, delay, style) => {
 		ctx.beginPath();
-		ctx.strokeStyle = "white";
+		ctx.strokeStyle = "cyan";
 
 		ctx.lineWidth = 2;
 
@@ -620,7 +620,7 @@ function drawSolution() {
 
 		drawLineSegment(0);
 	};
-	const delayBetweenLines = 40;
+	const delayBetweenLines = 50;
 
 	drawLinesWithDelay(ctx, path, delayBetweenLines);
 }
