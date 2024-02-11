@@ -635,6 +635,7 @@ function drawSolution() {
 
 		drawLineSegment(0);
 	};
+
 	const delayBetweenLines = 30;
 
 	drawLinesWithDelay(ctx, path, delayBetweenLines);
@@ -765,5 +766,6 @@ for (var i = 0; i < w * 2 + 1; i++) {
 		}
 	}
 }
+
 //ARRAY OF MAZE MADE OUT OF 1 AND 0, 90deg to left cuz of js
-console.log(arr);
+//console.log(arr);
