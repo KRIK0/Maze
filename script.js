@@ -647,8 +647,8 @@ function removeSolution() {
 	drawMaze();
 }
 
-chW = 9;
-chH = 9;
+chW = 12;
+chH = 15;
 function drawCh() {
 	character.width = 484 * scale;
 	character.height = 484 * scale;
