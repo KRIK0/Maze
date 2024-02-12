@@ -605,7 +605,7 @@ function drawSolution() {
 
 	const drawLinesWithDelay = (ctx, path, delay, style) => {
 		ctx.beginPath();
-		ctx.strokeStyle = "cyan";
+		ctx.strokeStyle = "#0FE81F";
 
 		ctx.lineWidth = 2;
 
@@ -654,7 +654,7 @@ function drawCh() {
 	character.height = 484 * scale;
 	ctx2.scale(scale, scale);
 
-	url = "pictures/PMC_36.png";
+	url = "pictures/8bit.png";
 	img = document.createElement("img");
 	img.setAttribute("src", url);
 	img.onload = function () {
