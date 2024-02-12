@@ -599,7 +599,6 @@ drawMaze();
 }*/
 
 function drawSolution() {
-	document.getElementById("play").setAttribute("disabled", true);
 	document.getElementById("sol").setAttribute("disabled", true);
 	character.style.display = "none";
 
@@ -629,7 +628,6 @@ function drawSolution() {
 			} else {
 				ctx.closePath();
 				document.getElementById("sol").removeAttribute("disabled");
-				document.getElementById("play").removeAttribute("disabled");
 			}
 		};
 
@@ -642,7 +640,6 @@ function drawSolution() {
 }
 
 function removeSolution() {
-	document.getElementById("play").setAttribute("disabled", true);
 	ctx.clearRect(0, 0, canvas.width, canvas.height);
 	drawMaze();
 }
@@ -769,3 +766,14 @@ for (var i = 0; i < w * 2 + 1; i++) {
 
 //ARRAY OF MAZE MADE OUT OF 1 AND 0, 90deg to left cuz of js
 //console.log(arr);
+document.addEventListener("DOMContentLoaded", function () {
+	Swal.fire({
+		title: "Welcome to the woods of Tarkov",
+		text: "Your goal is to escape from Tarkov but first you must navigate the woods of Tarkov. If you are having trouble feel free to pay for the car extraction.",
+		confirmButtonText: "Understood",
+		customClass: "sweet",
+		confirmButtonColor: "#354635",
+	});
+	drawCh();
+	moveCh();
+});

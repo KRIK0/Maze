@@ -1,3 +1,8 @@
+@font-face {
+	font-family: tarkov;
+	src: url(../fonts/Vtks_Escape.ttf);
+}
+
 body {
 	margin: 0 auto;
 }
@@ -34,4 +39,10 @@ body {
 #canvas2 {
 	position: absolute;
 	top: 0;
+}
+.swal2-popup,
+.swal2-styled:not([disabled]) {
+	color: whitesmoke;
+	font-family: tarkov;
+	background-color: #5a7658;
 }
