@@ -769,7 +769,7 @@ for (var i = 0; i < w * 2 + 1; i++) {
 document.addEventListener("DOMContentLoaded", function () {
 	Swal.fire({
 		title: "Welcome to the woods of Tarkov",
-		text: "Your goal is to escape from Tarkov but first you must navigate the woods of Tarkov. If you are having trouble feel free to pay for the car extraction.",
+		html: "Your goal is to escape from Tarkov but first you must navigate through the woods. If you are having trouble feel free to pay for the car extraction. <br><br> Use the arrow keys to move around.",
 		confirmButtonText: "Understood",
 		customClass: "sweet",
 		confirmButtonColor: "#354635",
