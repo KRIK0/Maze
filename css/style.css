@@ -9,8 +9,8 @@ body {
 #main {
 	height: 100vh;
 	background: url(../pictures/background.png) no-repeat;
-	filter: grayscale(100%);
-
+	/* grayscale
+	background: url(../pictures/grayscale.png) no-repeat;
 	/* dolphine
 	background: url(../pictures/dolphine.jpg) no-repeat;
 	/* background
