@@ -9,6 +9,30 @@ body {
 #main {
 	height: 100vh;
 	background: url(../pictures/background.png) no-repeat;
+	filter: grayscale(100%);
+
+	/* dolphine
+	background: url(../pictures/dolphine.jpg) no-repeat;
+	/* background
+	background: url(../pictures/background.png) no-repeat;
+	/* Anime Forest 1-5
+	background: url(../pictures/AnimeWoods1.png) no-repeat;
+	background: url(../pictures/AnimeWoods2.jpg) no-repeat;
+	background: url(../pictures/AnimeWoods3.jpg) no-repeat;
+	background: url(../pictures/AnimeWoods4.jpg) no-repeat;
+	background: url(../pictures/AnimeWoods5.jpg) no-repeat;
+	/* gradient
+	background-image: linear-gradient(rgb(34, 161, 66), rgb(17, 70, 1));;
+	background-image: linear-gradient(
+		rgba(37, 206, 79, 0.581),
+		rgba(9, 39, 0, 0.526)
+	);
+	/* foggy
+	background: url(../pictures/background_2.png) no-repeat;
+	/* light blue
+	background: url(../pictures/prenos.jpg) no-repeat;
+	background-size: 1000%;
+	*/
 }
 #EFTtitle {
 	width: 503px;
@@ -20,11 +44,11 @@ body {
 	margin: auto;
 }
 #maze {
-	background-image: url(../pictures/woods_2.png);
+	background-image: url(../pictures/woods_2_lighter.png);
 }
 #mazecanvas {
-	padding-left: 12px;
-	padding-top: 5px;
+	padding-top: 7px;
+	padding-bottom: 7px;
 }
 
 .ho {

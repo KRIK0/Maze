@@ -517,6 +517,7 @@ function drawMaze() {
 	canvas.width = 484 * scale;
 	canvas.height = 484 * scale;
 	ctx.scale(scale, scale);
+	ctx.strokeStyle = "#000059";
 
 	ctx.beginPath();
 	for (i = 0; i < cord.length; i++) {
