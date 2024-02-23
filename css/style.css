@@ -8,7 +8,7 @@ body {
 }
 #main {
 	height: 100vh;
-	background: url(../pictures/background.png) no-repeat;
+	background: url(../pictures/Streets.webp) no-repeat;
 	/* grayscale
 	background: url(../pictures/grayscale.png) no-repeat;
 	/* dolphine
@@ -32,6 +32,10 @@ body {
 	/* light blue
 	background: url(../pictures/prenos.jpg) no-repeat;
 	background-size: 1000%;
+	/* streets
+	background: url(../pictures/Streets.webp) no-repeat;
+	background: url(../pictures/Main_Street.webp) no-repeat;
+	background: url(../pictures/Shoreline.jpg) no-repeat;
 	*/
 }
 #EFTtitle {
@@ -69,4 +73,21 @@ body {
 	color: whitesmoke;
 	font-family: tarkov;
 	background-color: #5a7658;
+}
+.button {
+	z-index: 9999999;
+	position: absolute;
+	left: 262px;
+	bottom: 380px;
+	font-family: tarkov;
+	font-size: 14px;
+}
+.solve {
+	height: 30px;
+	width: 100px;
+	font-family: tarkov;
+	background-color: #597382;
+}
+#Escape {
+	font-size: 25px;
 }
