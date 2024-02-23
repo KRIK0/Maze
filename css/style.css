@@ -48,7 +48,7 @@ body {
 	margin: auto;
 }
 #maze {
-	background-image: url(../pictures/woods_2_lighter.png);
+	background-image: url(../pictures/woods_2_lighterer.png);
 }
 #mazecanvas {
 	padding-top: 7px;
@@ -77,9 +77,9 @@ body {
 .button {
 	z-index: 9999999;
 	position: absolute;
-	left: 262px;
+	left: 258px;
 	bottom: 380px;
-	font-family: tarkov;
+	font-family: tarkov, sans-serif;
 	font-size: 14px;
 }
 .solve {
@@ -88,6 +88,9 @@ body {
 	font-family: tarkov;
 	background-color: #597382;
 }
+.solve:hover {
+	cursor: pointer;
+}
 #Escape {
-	font-size: 25px;
+	font-size: 27px;
 }
