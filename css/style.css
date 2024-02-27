@@ -8,7 +8,7 @@ body {
 }
 #main {
 	height: 100vh;
-	background: url(../pictures/Streets.webp) no-repeat;
+	background: url(../pictures/background.png) no-repeat;
 	/* grayscale
 	background: url(../pictures/grayscale.png) no-repeat;
 	/* dolphine
@@ -48,7 +48,7 @@ body {
 	margin: auto;
 }
 #maze {
-	background-image: url(../pictures/woods_2_lighterer.png);
+	background-image: url(../pictures/bck_game-bw-small.jpg);
 }
 #mazecanvas {
 	padding-top: 7px;
