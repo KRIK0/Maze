@@ -77,8 +77,8 @@ body {
 .button {
 	z-index: 9999999;
 	position: absolute;
-	left: 258px;
-	bottom: 380px;
+	left: 256px;
+	bottom: 420px;
 	font-family: tarkov, sans-serif;
 	font-size: 14px;
 }
@@ -93,4 +93,11 @@ body {
 }
 #Escape {
 	font-size: 27px;
+}
+.help{
+	height: 30px;
+	width: 100px;
+	font-family: tarkov;
+	color: #597382;
+	background-color: #151c1c;
 }

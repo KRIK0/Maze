@@ -517,7 +517,7 @@ function drawMaze() {
 	canvas.width = 484 * scale;
 	canvas.height = 484 * scale;
 	ctx.scale(scale, scale);
-	ctx.strokeStyle = "#012116";
+	ctx.strokeStyle = "#005800";
 
 	ctx.beginPath();
 	for (i = 0; i < cord.length; i++) {
@@ -525,6 +525,7 @@ function drawMaze() {
 		ctx.lineTo(cord[i][2], cord[i][3]);
 	}
 	ctx.lineWidth = 1;
+	ctx.lineCap = "round";
 	ctx.stroke();
 	ctx.closePath();
 }
@@ -705,6 +706,15 @@ document.addEventListener("keydown", (e) => {
 					ctx2.drawImage(img, x, y, chW, chH);
 					console.log(x + " " + y);
 				}
+				if (x == 244 && y == 482) {
+					endMenu();
+					ctx2.clearRect(0, 0, canvas.width, canvas.height);
+					drawCh();
+					y = 2;
+					x = 228;
+					me = true;
+					document.getElementById("play").removeAttribute("disabled");
+				}
 			}
 			break;
 
@@ -768,6 +778,18 @@ for (var i = 0; i < w * 2 + 1; i++) {
 //ARRAY OF MAZE MADE OUT OF 1 AND 0, 90deg to left cuz of js
 //console.log(arr);
 document.addEventListener("DOMContentLoaded", function () {
+		Swal.fire({
+			title: "Welcome to the woods of Tarkov",
+			html: "Your goal is to escape from Tarkov but first you must navigate through the woods. If you are having trouble feel free to pay for the car extraction. <br><br> Use the arrow keys to move around.",
+			confirmButtonText: "Understood",
+			customClass: "sweet",
+			confirmButtonColor: "#354635",
+		});
+		drawCh();
+		moveCh();
+});
+
+function Help(){
 	Swal.fire({
 		title: "Welcome to the woods of Tarkov",
 		html: "Your goal is to escape from Tarkov but first you must navigate through the woods. If you are having trouble feel free to pay for the car extraction. <br><br> Use the arrow keys to move around.",
@@ -775,6 +797,4 @@ document.addEventListener("DOMContentLoaded", function () {
 		customClass: "sweet",
 		confirmButtonColor: "#354635",
 	});
-	drawCh();
-	moveCh();
-});
+  }
