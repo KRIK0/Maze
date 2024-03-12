@@ -629,6 +629,7 @@ function drawSolution() {
 				}, delay);
 			} else {
 				ctx.closePath();
+				Finish();
 				document.getElementById("sol").removeAttribute("disabled");
 			}
 		};
@@ -704,14 +705,13 @@ document.addEventListener("keydown", (e) => {
 					ctx2.drawImage(img, x, y, chW, chH);
 					console.log(x + " " + y);
 				}
-				if (x == 244 && y == 482) {
-					endMenu();
+				if (x == 245 && y == 466) {
+					Finish();
 					ctx2.clearRect(0, 0, canvas.width, canvas.height);
 					drawCh();
 					y = 2;
 					x = 228;
 					me = true;
-					document.getElementById("play").removeAttribute("disabled");
 				}
 			}
 			break;
@@ -791,6 +791,16 @@ function Help() {
 	Swal.fire({
 		title: "Welcome to the woods of Tarkov",
 		html: "Your goal is to escape from Tarkov but first you must navigate through the woods. If you are having trouble feel free to pay for the car extraction. <br><br> Use the arrow keys to move around.",
+		confirmButtonText: "Understood",
+		customClass: "sweet",
+		confirmButtonColor: "#354635",
+	});
+}
+
+function Finish() {
+	Swal.fire({
+		title: "Congratulations",
+		html: "You escaped the woods. <br> The scavs can't get you anymore. <br> You are safe for now.",
 		confirmButtonText: "Understood",
 		customClass: "sweet",
 		confirmButtonColor: "#354635",
