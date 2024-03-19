@@ -606,7 +606,7 @@ function drawSolution() {
 
 	const drawLinesWithDelay = (ctx, path, delay, style) => {
 		ctx.beginPath();
-		ctx.strokeStyle = "#0FE81F";
+		ctx.strokeStyle = "#5a7658";
 
 		ctx.lineWidth = 2;
 
