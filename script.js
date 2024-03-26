@@ -506,6 +506,14 @@ var path = [
 	[250, 482],
 ];
 
+sound = new Audio('footsteps.mp3');
+sound.volume=0.15;
+
+document.addEventListener("click", (event) => {
+  sound.play();
+  //endMenu();
+});
+
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const character = document.getElementById("canvas2");
