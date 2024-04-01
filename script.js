@@ -506,12 +506,12 @@ var path = [
 	[250, 482],
 ];
 
-sound = new Audio('footsteps.mp3');
-sound.volume=0.15;
+sound = new Audio("footsteps.mp3");
+sound.volume = 0.15;
 
 document.addEventListener("click", (event) => {
-  sound.play();
-  //endMenu();
+	sound.play();
+	//endMenu();
 });
 
 const canvas = document.getElementById("canvas");
@@ -814,6 +814,7 @@ function Help() {
 }
 
 function Finish() {
+	sound.stop();
 	Swal.fire({
 		title: "Congratulations",
 		html: "You escaped the woods. <br> The scavs can't get you anymore. <br> You are safe for now.",
