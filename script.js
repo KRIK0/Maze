@@ -608,6 +608,14 @@ drawMaze();
 	}
 }*/
 
+sound = new Audio("running.mp3");
+sound.volume = 0.15;
+
+document.addEventListener("click", (event) => {
+	sound.play();
+	//endMenu();
+});
+
 function drawSolution() {
 	document.getElementById("sol").setAttribute("disabled", true);
 	character.style.display = "none";
@@ -660,11 +668,11 @@ function drawCh() {
 	character.height = 484 * scale;
 	ctx2.scale(scale, scale);
 
-	url = "pictures/8bit.png";
+	url = "pictures/spritesheet.png";
 	img = document.createElement("img");
 	img.setAttribute("src", url);
 	img.onload = function () {
-		ctx2.drawImage(img, 133, 2, chW, chH);
+		ctx2.drawImage(img, 0, 0, 11, 14, 133, 2, chW, chH);
 	};
 }
 
@@ -678,7 +686,7 @@ function moveCh() {
 	y = 2;
 	x = 133;
 	m = 16;
-	ctx2.drawImage(img, x, y, chW, chH);
+	ctx2.drawImage(img, 0, 0, 11, 14, x, y, chW, chH);
 }
 document.addEventListener("keydown", (e) => {
 	//var p = ctx.getImageData(200, g, 1, 1).data[0];
@@ -697,7 +705,7 @@ document.addEventListener("keydown", (e) => {
 				if (arr[((x - 5) / m) * 2 + 1][((y - 2) / m) * 2 + 1 - 1] == 0) {
 					ctx2.clearRect(0, 0, canvas.width, canvas.height);
 					y = y - m;
-					ctx2.drawImage(img, x, y, chW, chH);
+					ctx2.drawImage(img, 39, 0, 11, 14, x, y, chW, chH);
 					console.log(x + " " + y);
 				}
 			}
@@ -710,7 +718,7 @@ document.addEventListener("keydown", (e) => {
 				if (arr[((x - 5) / m) * 2 + 1][((y - 2) / m) * 2 + 1 + 1] == 0) {
 					ctx2.clearRect(0, 0, canvas.width, canvas.height);
 					y = y + m;
-					ctx2.drawImage(img, x, y, chW, chH);
+					ctx2.drawImage(img, 26, 0, 11, 14, x, y, chW, chH);
 					console.log(x + " " + y);
 				}
 				if (x == 245 && y == 466) {
@@ -731,7 +739,7 @@ document.addEventListener("keydown", (e) => {
 				if (arr[((x - 5) / m) * 2 + 1 - 1][((y - 2) / m) * 2 + 1] == 0) {
 					ctx2.clearRect(0, 0, canvas.width, canvas.height);
 					x = x - m;
-					ctx2.drawImage(img, x, y, chW, chH);
+					ctx2.drawImage(img, 13, 0, 11, 14, x, y, chW, chH);
 					console.log(x + " " + y);
 				}
 			}
@@ -744,7 +752,7 @@ document.addEventListener("keydown", (e) => {
 				if (arr[((x - 5) / m) * 2 + 1 + 1][((y - 2) / m) * 2 + 1] == 0) {
 					ctx2.clearRect(0, 0, canvas.width, canvas.height);
 					x = x + m;
-					ctx2.drawImage(img, x, y, chW, chH);
+					ctx2.drawImage(img, 0, 0, 11, 14, x, y, chW, chH);
 					console.log(x + " " + y);
 				}
 			}
